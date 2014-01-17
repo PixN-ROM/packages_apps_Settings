@@ -158,5 +158,6 @@ public class Settings extends SettingsActivity {
 
     // PixN Additions.
     public static class PixNSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class SuperSUActivity extends SettingsActivity { /* empty */ }
     public static class AmbientDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }
