@@ -23,6 +23,7 @@
 -keep class com.android.settings.display.NightDisplaySettings
 -keep class com.android.settings.aosp.**
 -keep class com.pixN.settings.**
+-keep class com.android.settings.preference.*
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {
