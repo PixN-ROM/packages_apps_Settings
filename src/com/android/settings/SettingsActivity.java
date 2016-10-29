@@ -131,6 +131,10 @@ import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
 import com.pixn.settings.PixNSettings;
+import com.pixn.settings.fragments.FlingSettings;
+import com.pixn.settings.fragments.NavbarSettings;
+import com.pixn.settings.fragments.SmartbarSettings;
+import com.pixn.settings.fragments.PulseSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -357,10 +361,21 @@ public class SettingsActivity extends SettingsDrawerActivity
             TestingSettings.class.getName(),
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
+<<<<<<< HEAD
             PixNSettings.class.getName(),
             AmbientSettings.class.getName()
             DisplayRotation.class.getName()
             ExpandedDesktopPreferenceFragment.class.getName()
+=======
+            FlashSettings.class.getName(),
+            AmbientSettings.class.getName(),
+            DisplayRotation.class.getName(),
+            ExpandedDesktopPreferenceFragment.class.getName(),
+            NavbarSettings.class.getName(),
+            FlingSettings.class.getName(),
+            SmartbarSettings.class.getName(),
+            PulseSettings.class.getName()
+>>>>>>> f522aef... DUI: Initial N checkin
     };
 
 
