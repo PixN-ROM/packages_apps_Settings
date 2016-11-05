@@ -135,6 +135,7 @@ import com.pixn.settings.fragments.FlingSettings;
 import com.pixn.settings.fragments.NavbarSettings;
 import com.pixn.settings.fragments.SmartbarSettings;
 import com.pixn.settings.fragments.PulseSettings;
+import com.pixn.settings.fragments.HeadsUpSettings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -374,8 +375,13 @@ public class SettingsActivity extends SettingsDrawerActivity
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
+<<<<<<< HEAD
             PulseSettings.class.getName()
 >>>>>>> f522aef... DUI: Initial N checkin
+=======
+            PulseSettings.class.getName(),
+            HeadsUpSettings.class.getName()
+>>>>>>> ae0373e... add activity to launch headsup settings fragment
     };
 
 
