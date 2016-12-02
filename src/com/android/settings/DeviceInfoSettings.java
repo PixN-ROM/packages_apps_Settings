@@ -76,6 +76,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_PROCESSOR = "device_processor";
     private static final String KEY_ROM_VERSION = "rom_version";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
+    private static final String KEY_MOD_BUILD_COMPILER_GCC = "build_compiler_gcc";
+    private static final String KEY_MOD_BUILD_COMPILER_CLANG = "build_compiler_clang";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -136,6 +138,8 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_DEVICE_PROCESSOR, getDeviceProcessorInfo());
         setValueSummary(KEY_ROM_VERSION, "ro.rom.version");
         findPreference(KEY_ROM_VERSION).setEnabled(true);
+        setValueSummary(KEY_MOD_BUILD_COMPILER_GCC, "ro.build.gcc");
+        setValueSummary(KEY_MOD_BUILD_COMPILER_CLANG, "ro.build.clang");
 
         if (!SELinux.isSELinuxEnabled()) {
             String status = getResources().getString(R.string.selinux_status_disabled);
