@@ -21,7 +21,7 @@
 -keep class com.android.settings.display.*FragmentForSetupWizard
 -keep class com.android.settings.aosp.**
 -keep class com.android.settings.preference.*
--keep class com.flash.settings.**
+-keep class com.pixN.settings.**
 
 # Keep click responders
 -keepclassmembers class com.android.settings.inputmethod.UserDictionaryAddWordActivity {

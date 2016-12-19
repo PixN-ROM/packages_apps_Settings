@@ -156,7 +156,7 @@ public class Settings extends SettingsActivity {
     public static class PersonalSettings extends SettingsActivity { /* empty */ }
     public static class SystemSettings extends SettingsActivity { /* empty */ }
 
-    // Flash Additions.
-    public static class FlashSettingsActivity extends SettingsActivity { /* empty */ }
+    // PixN Additions.
+    public static class PixNSettingsActivity extends SettingsActivity { /* empty */ }
     public static class AmbientDisplaySettingsActivity extends SettingsActivity { /* empty */ }
 }
