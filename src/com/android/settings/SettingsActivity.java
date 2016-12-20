@@ -130,7 +130,7 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
-import com.pixn.settings.PixNSettings;
+import com.pixn.settings.PixnSettings;
 import com.pixn.settings.fragments.FlingSettings;
 import com.pixn.settings.fragments.NavbarSettings;
 import com.pixn.settings.fragments.SmartbarSettings;
@@ -248,7 +248,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.SimSettingsActivity.class.getName(),
             Settings.WirelessSettingsActivity.class.getName(),
             //custom_section
-            PixNSettings.class.getName(),
+            PixnSettings.class.getName(),
             //device_section
             Settings.HomeSettingsActivity.class.getName(),
             Settings.SoundSettingsActivity.class.getName(),
@@ -362,26 +362,15 @@ public class SettingsActivity extends SettingsDrawerActivity
             TestingSettings.class.getName(),
             WifiAPITest.class.getName(),
             WifiInfo.class.getName(),
-<<<<<<< HEAD
-            PixNSettings.class.getName(),
-            AmbientSettings.class.getName()
-            DisplayRotation.class.getName()
-            ExpandedDesktopPreferenceFragment.class.getName()
-=======
-            FlashSettings.class.getName(),
+            PixnSettings.class.getName(),
             AmbientSettings.class.getName(),
             DisplayRotation.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
             NavbarSettings.class.getName(),
             FlingSettings.class.getName(),
             SmartbarSettings.class.getName(),
-<<<<<<< HEAD
-            PulseSettings.class.getName()
->>>>>>> f522aef... DUI: Initial N checkin
-=======
             PulseSettings.class.getName(),
             HeadsUpSettings.class.getName()
->>>>>>> ae0373e... add activity to launch headsup settings fragment
     };
 
 

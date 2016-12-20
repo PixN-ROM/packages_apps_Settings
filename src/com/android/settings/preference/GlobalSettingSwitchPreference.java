@@ -62,4 +62,6 @@ public class GlobalSettingSwitchPreference extends SwitchPreference {
         // instead of catching an exception. (All values are stored as strings.)
         return Settings.Global.getString(getContext().getContentResolver(), getKey()) != null;
     }
+
+
 }

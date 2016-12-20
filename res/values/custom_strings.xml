@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Pure Nexus Project
      Copyright (C) 2016 Flash ROM
-     Copyright (C) 2016 PixN ROM
+     Copyright (C) 2016 Pixn ROM
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@
   <!-- Dashboard -->
     <string name="header_category_custom">ROM Control</string>
 
-    <string name="pixn_settings_title">PixN Settings</string>
+    <string name="pixn_settings_title">Pixn Settings</string>
     <string name="pixn_settings_summary">Customize ROM features</string>
     <string name="substratum_title">Substratum</string>
     <string name="substratum_summary">Theme your device</string>
@@ -46,7 +46,7 @@
 
 <!-- Device Info Settings -->
     <!-- ROM version -->
-    <string name="rom_version">PixN version</string>
+    <string name="rom_version">Pixn version</string>
     <string name="rom_version_default">Unknown</string>
     <!-- Vendor version -->
     <string name="vendor_version">Vendor version</string>

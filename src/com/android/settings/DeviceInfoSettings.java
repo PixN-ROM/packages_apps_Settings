@@ -57,12 +57,9 @@ import static com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 public class DeviceInfoSettings extends SettingsPreferenceFragment implements Indexable {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
-<<<<<<< HEAD
     private static final String FILENAME_PROC_MEMINFO = "/proc/meminfo";
     private static final String FILENAME_PROC_CPUINFO = "/proc/cpuinfo";
-=======
     private static final String FILENAME_PROC_VERSION = "/proc/version";
->>>>>>> 08c45e7... Show full proc/version information
 
     private static final String KEY_MANUAL = "manual";
     private static final String KEY_REGULATORY_INFO = "regulatory_info";
@@ -359,21 +356,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         }
     }
 
-    /**
-     * Reads a line from the specified file.
-     * @param filename the file to read from
-     * @return the first line, if any.
-     * @throws IOException if the file couldn't be read
-     */
-    private static String readLine(String filename) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
-        try {
-            return reader.readLine();
-        } finally {
-            reader.close();
-        }
-    }
-
     public static String getFormattedKernelVersion() {
         try {
             return formatKernelVersion(readLine(FILENAME_PROC_VERSION));
@@ -481,7 +463,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 return SystemProperties.get(property).equals("");
             }
         };
-<<<<<<< HEAD
 
     /**
      * Reads a line from the specified file.
@@ -554,6 +535,4 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         return result;
     }
 
-=======
->>>>>>> 08c45e7... Show full proc/version information
 }
