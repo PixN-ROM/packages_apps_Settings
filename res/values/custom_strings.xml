@@ -19,7 +19,7 @@
 <!-- Custom Settings -->    
   <!-- Dashboard -->
     <string name="header_category_custom">ROM Control</string>
-    <string name="pixN_settings_title">PixN Settings</string>
+    <string name="pixn_settings_title">PixN Settings</string>
 
 <!-- Development Settings -->
     <!-- Dev Options Enabled by Default -->

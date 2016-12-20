@@ -32,7 +32,7 @@ LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
-    --extra-packages android.support.v7.preference:android.support.v14.preference:android.support.v17.preference:android.support.v7.appcompat:android.support.v7.recyclerview:com.pixN.settings
+    --extra-packages android.support.v7.preference:android.support.v14.preference:android.support.v17.preference:android.support.v7.appcompat:android.support.v7.recyclerview:com.pixn.settings
 
 ifneq ($(INCREMENTAL_BUILDS),)
     LOCAL_PROGUARD_ENABLED := disabled
