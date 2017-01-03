@@ -135,12 +135,12 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settingslib.drawer.DashboardCategory;
 import com.android.settingslib.drawer.SettingsDrawerActivity;
 import com.android.settingslib.drawer.Tile;
-import com.flash.settings.FlashSettings;
-import com.flash.settings.fragments.FlingSettings;
-import com.flash.settings.fragments.NavbarSettings;
-import com.flash.settings.fragments.SmartbarSettings;
-import com.flash.settings.fragments.PulseSettings;
-import com.flash.settings.fragments.HeadsUpSettings;
+import com.pixn.settings.PixNSettings;
+import com.pixn.settings.fragments.FlingSettings;
+import com.pixn.settings.fragments.NavbarSettings;
+import com.pixn.settings.fragments.SmartbarSettings;
+import com.pixn.settings.fragments.PulseSettings;
+import com.pixn.settings.fragments.HeadsUpSettings;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -254,7 +254,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             Settings.SimSettingsActivity.class.getName(),
             Settings.WirelessSettingsActivity.class.getName(),
             //custom_section
-            FlashSettings.class.getName(),
+            PixNSettings.class.getName(),
             //device_section
             Settings.HomeSettingsActivity.class.getName(),
             Settings.SoundSettingsActivity.class.getName(),
@@ -374,7 +374,7 @@ public class SettingsActivity extends SettingsDrawerActivity
             NightDisplaySettings.class.getName(),
             ManageDomainUrls.class.getName(),
             AutomaticStorageManagerSettings.class.getName(),
-            FlashSettings.class.getName(),
+            PixNSettings.class.getName(),
             DisplayRotation.class.getName(),
             ExpandedDesktopPreferenceFragment.class.getName(),
             NavbarSettings.class.getName(),
