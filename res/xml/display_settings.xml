@@ -94,7 +94,9 @@
                 android:title="@string/double_tap_wake_doze_title"
                 android:summary="@string/double_tap_wake_doze_summary"
                 android:defaultValue="false"
-                android:dependency="doze" />
+                 />
+
+<!-- android:dependency="doze" above? -->
 
         <SwitchPreference
                 android:key="tap_to_wake"
