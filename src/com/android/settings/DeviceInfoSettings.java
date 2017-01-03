@@ -42,23 +42,15 @@ import com.android.settings.search.Indexable;
 import com.android.settingslib.DeviceInfoUtils;
 import com.android.settingslib.RestrictedLockUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static com.android.settingslib.RestrictedLockUtils.EnforcedAdmin;
 
 public class DeviceInfoSettings extends SettingsPreferenceFragment implements Indexable {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
-    private static final String FILENAME_PROC_MEMINFO = "/proc/meminfo";
-    private static final String FILENAME_PROC_CPUINFO = "/proc/cpuinfo";
 
 
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -73,8 +65,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
-    private static final String KEY_DEVICE_MEMORY = "device_memory";
-    private static final String KEY_DEVICE_PROCESSOR = "device_processor";
+
     private static final String KEY_ROM_VERSION = "rom_version";
     private static final String KEY_VENDOR_VERSION = "vendor_version";
     private static final String KEY_MOD_BUILD_COMPILER_GCC = "build_compiler_gcc";
@@ -136,9 +127,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         setStringSummary(KEY_DEVICE_NAME, Build.PRODUCT);
         setStringSummary(KEY_BUILD_NUMBER, Build.DISPLAY);
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
-        findPreference(KEY_KERNEL_VERSION).setSummary(DeviceInfoUtils.getFormattedKernelVersion());
-        setStringSummary(KEY_DEVICE_MEMORY, getDeviceMemoryInfo());
-        setStringSummary(KEY_DEVICE_PROCESSOR, getDeviceProcessorInfo());
         setValueSummary(KEY_ROM_VERSION, "ro.rom.version");
         findPreference(KEY_ROM_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_COMPILER_GCC, "ro.build.gcc");
@@ -429,76 +417,5 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 return SystemProperties.get(property).equals("");
             }
         };
-
-    /**
-     * Reads a line from the specified file.
-     * @param filename the file to read from
-     * @return the first line, if any.
-     * @throws IOException if the file couldn't be read
-     */
-    private static String readLine(String filename) throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader(filename), 256);
-        try {
-            return reader.readLine();
-        } finally {
-            reader.close();
-        }
-    }
-
-    /**
-     * Returns the Hardware value in /proc/cpuinfo, else returns "Unknown".
-     * @return a string that describes the processor
-     */
-    private static String getDeviceProcessorInfo() {
-        // SoC : XYZ
-        final String PROC_HARDWARE_SOC = "Hardware\\s*:\\s*(.*?)(?:\\(.*)?$"; /* SoC string */
-
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(FILENAME_PROC_CPUINFO));
-            String cpuinfo;
-
-            try {
-                while (null != (cpuinfo = reader.readLine())) {
-                    if (cpuinfo.startsWith("Hardware")) {
-                        Matcher m = Pattern.compile(PROC_HARDWARE_SOC).matcher(cpuinfo);
-                        if (m.matches()) {
-                            return m.group(1);
-                        }
-                    }
-                }
-                return "Unknown";
-            } finally {
-                reader.close();
-            }
-        } catch (IOException e) {
-            Log.e(LOG_TAG,
-                "IO Exception when getting cpuinfo for Device Info screen",
-                e);
-
-            return "Unknown";
-        }
-    }
-
-    private String getDeviceMemoryInfo() {
-        String result = null;
-
-        try {
-            /* /proc/meminfo entries follow this format:
-             * MemTotal:         362096 kB
-             * MemFree:           29144 kB
-             * Buffers:            5236 kB
-             * Cached:            81652 kB
-             */
-            String firstLine = readLine(FILENAME_PROC_MEMINFO);
-            if (firstLine != null) {
-                String parts[] = firstLine.split("\\s+");
-                if (parts.length == 3) {
-                    result = Long.parseLong(parts[1])/1024 + " MB";
-                }
-            }
-        } catch (IOException e) {}
-
-        return result;
-    }
 
 }
