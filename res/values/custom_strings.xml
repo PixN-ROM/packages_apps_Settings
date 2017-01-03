@@ -47,7 +47,7 @@
 
 <!-- Device Info Settings -->
     <!-- ROM version -->
-    <string name="rom_version">Flash version</string>
+    <string name="rom_version">PixN version</string>
     <string name="rom_version_default">Unknown</string>
     <!-- Vendor version -->
     <string name="vendor_version">Vendor version</string>
