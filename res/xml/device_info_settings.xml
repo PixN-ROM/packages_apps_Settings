@@ -25,13 +25,6 @@
                         android:data="https://forum.xda-developers.com/xperia-z5/development/e6683-aosp-pixel-nougat-rom-t3497690" />
         </PreferenceScreen>
 
-        <!-- PixN Donate Text -->
-        <PreferenceScreen android:key="pixn_donate"
-                android:layout="@layout/about_donate_row">
-                <intent android:action="android.intent.action.VIEW"
-                        android:data="https://www.instamojo.com/@HaoZeke/" />
-        </PreferenceScreen>
-
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status"
